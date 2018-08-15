@@ -1,0 +1,540 @@
+@charset "utf-8"; /* CSS Document */
+@import url('https://fonts.googleapis.com/css?family=Quantico:700'); html {
+    /* height: 100%; */
+}
+
+body {
+    font-family: "微軟正黑體";
+    letter-spacing: 2px;
+    min-height: 100%;
+    background: #3781b2;
+    background: -moz-radial-gradient(center, ellipse cover, #3781b2 0%, #000000 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #3781b2 0%,#000000 100%);
+    background: radial-gradient(ellipse at center, #3781b2 0%,#000000 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3781b2', endColorstr='#000000',GradientType=1 );
+}
+
+.dRL {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.dL {
+    padding-right: 0px;
+}
+
+.dR {
+    padding-left: 0px;
+}
+
+/* 頂端 */
+#BH {
+    left: 0px;
+    height: 60px;
+    padding: 15px 15px;
+    z-index: 999;
+}
+
+#LANG {
+    right: 0px;
+    height: 60px;
+    padding: 12px 15px;
+    z-index: 999;
+}
+
+#BH, #LANG {
+    position: fixed;
+}
+
+/* 語言切換 */
+#LANG>a:hover, a:focus {
+    color: #337ab7;
+}
+
+.dropdown-menu {
+    min-width: auto;
+    right: 15px;
+}
+
+/* 首頁 */
+#home {
+    background: rgba(255, 255, 255, 0);
+}
+
+#mTitle {
+    font-size: 14vmin;
+    font-family: 'Quantico', cursive;
+    text-align: center;
+    background: -webkit-linear-gradient(top left,#822d7e 0,#01b9f4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 2.5px;
+}
+
+#mTitle:after {
+    background: none;
+    display: inline-block;
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-shadow: 3px 3px 9px rgb(0, 75, 255),-3px -3px 9px rgb(255, 255, 255);
+    top: 0;
+    z-index: -1;
+    -webkit-text-stroke-color: transparent;
+    background-image: url(../img/MT.png);
+    /*background-size: 100% 100%;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#down {
+    margin-top: -25px;
+    font-size: 8vmin;
+    color: #fbd32f;
+    -webkit-text-stroke-color: #f8910e;
+    -webkit-text-stroke-width: 1px;
+    text-align: center;
+    text-shadow: 2px 4px 0px rgb(96, 72, 32),-1px -1px 0px rgb(255, 255, 255);
+}
+
+/* 里程碑 */
+#line {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 4.2vmin;
+    width: 10px;
+    height: 478vmin;
+    background: -webkit-linear-gradient(top,#822d7e 0,#01b9f4 100%);
+    box-shadow: inset 0px 0px 7px -2px #337ab7;
+    border: 1px #FFF solid;
+    z-index: -1;
+}
+
+#inline {
+    background-color: #FFF;
+    box-shadow: 0px 0px 20px white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0px;
+}
+
+#lTime {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+.Ttxt {
+    font-size: 10vmin;
+    letter-spacing: -1.2vmin;
+    text-align: center;
+    font-family: 'Quantico', cursive;
+    background: rgb(106,19,149);
+    background: -moz-linear-gradient(top, rgba(106,19,149,1) 0%, rgba(145,85,179,1) 50%, rgba(106,19,149,1) 51%, rgba(162,74,200,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(106,19,149,1) 0%,rgba(145,85,179,1) 50%,rgba(106,19,149,1) 51%,rgba(162,74,200,1) 100%);
+    background: linear-gradient(to bottom, rgba(106,19,149,1) 0%,rgba(145,85,179,1) 50%,rgba(106,19,149,1) 51%,rgba(162,74,200,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-color: #FFF;
+    -webkit-text-stroke-width: 2.5px;
+    margin-left: -1.2vmin;
+}
+
+/* 原始左圖右字 */
+.iBar {
+    position: relative;
+    overflow: hidden;
+    padding: 2.5vmin 0;
+    margin: 2.5vmin 0;
+}
+
+.states {
+    float: left;
+    max-width: 50%;
+    width: 100%;
+}
+
+.PT {
+    height: 32vmin;
+    width: 32vmin;
+    object-fit: contain;
+    position: relative;
+    float: right;
+    margin-right: 22.5%;
+    z-index: 50;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.75));
+}
+
+.PTBG {
+    background-color: #FFF;
+    height: 32vmin;
+    width: 32vmin;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: absolute;
+    left: 8.5%;
+    visibility: hidden;
+}
+
+.states>hr {
+    border: 1px dashed #FFF;
+    width: 20%;
+    right: 50%;
+    position: absolute;
+    top: 18.4vmin;
+    margin: 0;
+    z-index: -1;
+}
+
+.MMDD {
+    text-align: center;
+    font-size: 3.4vmin;
+    font-family: 'Quantico', cursive;
+    position: absolute;
+    top: 13.8vmin;
+    right: 52.5%;
+    z-index: 99;
+    margin: 0;
+    color: #ffffff;
+    text-shadow: 3px 3px 0 #337ab7, -1px -1px 0 #337ab7, 1px -1px 0 #337ab7, -1px 1px 0 #337ab7, 2px 2px 0 #337ab7, 1px 1px 0 #337ab7;
+}
+
+.content {
+    float: right;
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.CT {
+    text-align: left;
+    font-size: 3vmin;
+    font-weight: bold;
+    padding-left: 2.5vmin;
+    padding-right: 0.5vmin;
+    padding-bottom: 1vmin;
+    margin: 0;
+    display: table-cell;
+    line-height: normal;
+    color: #fbd32f;
+    text-shadow: 3px 3px 0 #604820, -1px -1px 0 #604820, 1px -1px 0 #604820, -1px 1px 0 #604820, 2px 2px 0 #604820, 1px 1px 0 #604820;
+}
+
+.HR {
+    background-color: #FFF;
+    height: 49.2vw;
+    width: 49.2vw;
+    -webkit-clip-path: polygon(0 50%, 0 51%, 10% 41%, 100% 41%, 100% 40%, 10% 40%);
+    clip-path: polygon(0 50%, 0 51%, 10% 41%, 100% 41%, 100% 40%, 10% 40%);
+    position: absolute;
+    margin-top: -24.8vw;
+    visibility: hidden;
+}
+
+.CTT {
+    text-align: justify;
+    color: #FFF;
+    font-size: 2vmin;
+    letter-spacing: 0;
+    left: 55%;
+    padding-right: 4.5vmin;
+    right: -1.6vmin;
+    padding-left: 2.5vmin;
+}
+
+/* 更改左字右圖 */
+.states_R {
+    float: right;
+    max-width: 50%;
+    width: 100%;
+}
+
+.PT_R {
+    height: 32vmin;
+    width: 32vmin;
+    object-fit: contain;
+    position: relative;
+    float: left;
+    margin-left: 22.5%;
+    z-index: 50;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.75));
+}
+
+.PTBG_R {
+    background-color: #FFF;
+    height: 32vmin;
+    width: 32vmin;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    position: absolute;
+    right: 8.5%;
+    visibility: hidden;
+}
+
+.states_R>hr {
+    border: 1px dashed #FFF;
+    width: 20%;
+    left: 50%;
+    position: absolute;
+    top: 18.4vmin;
+    margin: 0;
+    z-index: -1;
+}
+
+.MMDD_R {
+    text-align: center;
+    font-size: 3.4vmin;
+    font-family: 'Quantico', cursive;
+    position: absolute;
+    top: 13.8vmin;
+    left: 52.5%;
+    margin: 0;
+    z-index: 99;
+    color: #ffffff;
+    text-shadow: 3px 3px 0 #337ab7, -1px -1px 0 #337ab7, 1px -1px 0 #337ab7, -1px 1px 0 #337ab7, 2px 2px 0 #337ab7, 1px 1px 0 #337ab7;
+}
+
+.content_R {
+    float: left;
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.CT_R {
+    text-align: right;
+    font-size: 3vmin;
+    font-weight: bold;
+    padding-right: 2.5vmin;
+    padding-left: 0.5vmin;
+    padding-bottom: 1vmin;
+    margin: 0;
+    display: block;
+    line-height: normal;
+    color: #fbd32f;
+    text-shadow: 3px 3px 0 #604820, -1px -1px 0 #604820, 1px -1px 0 #604820, -1px 1px 0 #604820, 2px 2px 0 #604820, 1px 1px 0 #604820;
+}
+
+.HR_R {
+    background-color: #FFF;
+    height: 49.2vw;
+    width: 49.2vw;
+    -webkit-clip-path: polygon(100% 50%, 100% 51%, 90% 41%, 0 41%, 0 40%, 90% 40%);
+    clip-path: polygon(100% 50%, 100% 51%, 90% 41%, 0 41%, 0 40%, 90% 40%);
+    position: absolute;
+    margin-top: -24.8vw;
+    visibility: hidden;
+}
+
+.CTT_R {
+    text-align: right;
+    display: block;
+    color: #FFF;
+    font-size: 2vmin;
+    letter-spacing: 0;
+    right: 55%;
+    padding-left: 4.5vmin;
+    left: -1.6vmin;
+    padding-right: 2.5vmin;
+}
+
+@media (max-width: 768px) {
+    .CT {
+        bottom: 6vw;
+    }
+
+    .CT_R {
+        bottom: 6vw;
+    }
+
+    .owl-carousel {
+        width: 80%;
+    }
+}
+
+/*  動畫 */
+.slideanim {
+    visibility: hidden;
+}
+
+.slide {
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+    animation-fill-mode: forwards;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+.Dslide {
+    opacity: 0;
+    /* The name of the animation */
+    animation-name: Dslide;
+    -webkit-animation-name: Dslide;
+    /* The duration of the animation*/
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+    animation-fill-mode: forwards;
+}
+
+/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis
+ */
+@keyframes Dslide {
+    0% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+}
+
+@-webkit-keyframes Dslide {
+    0% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+}
+
+/* 內容頁 */
+.closebt {
+    padding-top: 5vmin;
+    margin-right: 0;
+    padding-right: 5vmin;
+    height: 10vmin;
+    width: 10vmin;
+}
+
+.CV {
+    padding-top: 5vmin;
+    width: 80%;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.A_LOGO {
+    height: 25%;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.A_Tittle {
+    padding-top: 4vmin;
+    text-align: center;
+    font-size: 4vmin;
+    font-weight: bold;
+    color: #fbd32f;
+    text-shadow: 3px 3px 0 #604820, -1px -1px 0 #604820, 1px -1px 0 #604820, -1px 1px 0 #604820, 2px 2px 0 #604820, 1px 1px 0 #604820;
+}
+
+.A_Tittle_P {
+    text-align: center;
+    font-size: 2.4vmin;
+    color: #f8910e;
+}
+
+.A_PP {
+    font-family: "微軟正黑體";
+    text-align: center;
+    font-size: 2.8vmin;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 3px 3px 0 #5c0036, -1px -1px 0 #5c0036, 1px -1px 0 #5c0036, -1px 1px 0 #5c0036, 2px 2px 0 #5c0036, 1px 1px 0 #5c0036;
+}
+
+.A_Text {
+    font-size: 2vmin;
+    color: #ffffff;
+    text-align: center;
+    padding: 0 10vmin;
+}
+
+.A_Red {
+    font-size: 2vmin;
+    color: #a94442;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10vmin;
+}
+
+.A_YL {
+    font-size: 2vmin;
+    color: #fbd32f;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 10vmin;
+}
+
+.owl-carousel {
+    max-width: 62.5rem;
+    margin: 0 auto;
+}
+
+.owl-carousel .item-video {
+    height: 300px;
+}
+
+/* 頁尾 */
+footer {
+    height: 100px;
+    background-color: #000;
+    color: #ffffff;
+    padding-left: 1vmin;
+    letter-spacing: 0px;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #fff;
+}
