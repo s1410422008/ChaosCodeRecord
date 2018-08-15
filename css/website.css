@@ -519,7 +519,7 @@ body {
 }
 
 .owl-carousel .item-video {
-    height: 100%;
+    height: 60vmin;
 }
 
 /* 頁尾 */
